@@ -2,13 +2,6 @@
 import csv
 import os
 
-def get_player_name():
-    """プレイヤーの名前を入力させる関数"""
-    name = input("あなたの名前を入力してください > ").strip()
-    # 未入力の場合は「名無し」にする
-    return name if name else "名無し"
-
-
 def save_and_show_ranking(name, tries, filename="ranking.csv"):
     """スコア（試行回数）を保存し、上位5名のランキングを表示する関数"""
     # 1. 記録を保存する

@@ -14,7 +14,7 @@ def play(digits=3):
     print(f"Hit & Blow（{digits} 桁・重複なし）")
 
     # ===== ① 開始時に足す（難易度・あいさつ など）: ここに書く =====
-    from .ranking_feature import get_player_name
+    from .player import get_player_name
     player_name = get_player_name()
     print(f"{player_name} さん、ゲームスタート！")
 

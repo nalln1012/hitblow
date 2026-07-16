@@ -40,7 +40,7 @@ def play(digits=3):
             print(f"正解！ {tries} 回で当たり（答え {secret}）")
 
 
-            from .ranking_feature import save_and_show_ranking
+            from .ranking import save_and_show_ranking
             save_and_show_ranking(player_name, tries)
         
             break

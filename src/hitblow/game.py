@@ -9,11 +9,14 @@
 from .core import judge, make_secret
 
 
-def play(digits=3):
+def play(digits=1):
     secret = make_secret(digits)
     print(f"Hit & Blow（{digits} 桁・重複なし）")
 
     # ===== ① 開始時に足す（難易度・あいさつ など）: ここに書く =====
+    from .ranking_feature import get_player_name
+    player_name = get_player_name()
+    print(f"{player_name} さん、ゲームスタート！")
 
     tries = 0
     while True:
@@ -35,4 +38,9 @@ def play(digits=3):
             # ===== ③ 勝利時に足す（スコア・履歴 など）: ここに書く =====
 
             print(f"正解！ {tries} 回で当たり（答え {secret}）")
+
+
+            from .ranking_feature import save_and_show_ranking
+            save_and_show_ranking(player_name, tries)
+        
             break

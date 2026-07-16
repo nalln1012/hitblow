@@ -6,10 +6,11 @@
    import も自分の場所の近くに書くこと（ファイル先頭にまとめない＝衝突回避）。
 """
 
-from .core import judge, make_secret
-
+from .core  import judge, make_secret
+from .diff import int_change
 
 def play(digits=3):
+    digits=int_change()
     secret = make_secret(digits)
     print(f"Hit & Blow（{digits} 桁・重複なし）")
 

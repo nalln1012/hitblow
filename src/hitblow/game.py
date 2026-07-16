@@ -9,7 +9,7 @@
 from .core import judge, make_secret
 
 
-def play(digits=1):
+def play(digits=3):
     secret = make_secret(digits)
     print(f"Hit & Blow（{digits} 桁・重複なし）")
 

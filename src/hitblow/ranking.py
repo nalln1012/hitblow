@@ -29,7 +29,7 @@ def save_and_show_ranking(name, tries, diff, filename="ranking.csv"):
     records.sort(key=lambda x: x[1])
     
     # 4. 指定難易度の上位5名（名前とスコア）を出力する
-    print(f"\n 👑\033[1;35m===\033[0m \033[1;36m難易度 {diff} のランキングトップ5\033[0m \033[1;35m===\033[0m 👑 ")
+    print(f"\n 👑　\033[1;35m===\033[0m \033[1;36m難易度 {diff} のランキングトップ5\033[0m \033[1;35m===\033[0m 👑 ")
     for i, (r_name, r_tries) in enumerate(records[:5], 1):
         print(f" {i}位 : {r_name} さん （{r_tries} 回）")
     print("\033[1;35m==========================================\033[0m")

@@ -10,9 +10,9 @@ from .core  import judge, make_secret
 from .diff import int_change
 
 def play(digits=3): 
-    print("\033[1;35m========================================\033[0m")
+    print("\033[1;35m=======================================================\033[0m")
     print("\033[1;36m      Hit & Blow Game ランキング1位を目指そう！！\033[0m")    
-    print("\033[1;35m========================================\033[0m")
+    print("\033[1;35m=======================================================\033[0m")
     digits=int_change()
     secret = make_secret(digits)
    

@@ -41,6 +41,6 @@ def play(digits=3):
 
 
             from .ranking import save_and_show_ranking
-            save_and_show_ranking(player_name, tries)
+            save_and_show_ranking(player_name, tries, digits)
         
             break

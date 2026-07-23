@@ -9,11 +9,13 @@
 from .core  import judge, make_secret
 from .diff import int_change
 
-def play(digits=3):
+def play(digits=3): 
+    print("\033[1;35m==============================\033[0m")
+    print("\033[1;36m      Hit & Blow Game\033[0m")    
+    print("\033[1;35m==============================\033[0m")
     digits=int_change()
     secret = make_secret(digits)
-    print(f"Hit & Blow（{digits} 桁・重複なし）")
-
+   
     # ===== ① 開始時に足す（難易度・あいさつ など）: ここに書く =====
     from .player import get_player_name
     player_name = get_player_name()
@@ -38,7 +40,7 @@ def play(digits=3):
 
             # ===== ③ 勝利時に足す（スコア・履歴 など）: ここに書く =====
 
-            print(f"正解！ {tries} 回で当たり（答え {secret}）")
+            print(f"\033[1;36m      正解！{tries}で当たり（答え{secret}）\033[0m")
 
 
             from .ranking import save_and_show_ranking
